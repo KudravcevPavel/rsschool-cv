@@ -1,0 +1,397 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+h1 {
+   color: #1f1d1dc4;
+   font-weight: 600;
+   font-size: 2rem;
+   opacity: 0.8;
+}
+
+h2,
+p,
+li,
+pre {
+   color: #1f1d1dc4;
+   font-weight: 500;
+   opacity: 0.8;
+}
+
+header {
+   font-family: 'Montserrat',
+      sans-serif;
+   min-height: 100vh;
+   background: linear-gradient(to right top, #c2c4c3, #000000) no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.glass {
+   background: white;
+   min-height: 60vh;
+   width: 65%;
+   background: linear-gradient(to right bottom,
+         rgba(255, 255, 255, 0.7),
+         rgba(255, 255, 255, 0.3)) no-repeat;
+   border-radius: 2rem;
+   z-index: 2;
+   backdrop-filter: blur(2rem);
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.circle1,
+.circle2 {
+   background: white;
+   background: linear-gradient(to right bottom,
+         rgba(255, 255, 255, 0.8),
+         rgba(255, 255, 255, 0.3));
+   height: 15rem;
+   width: 15rem;
+   position: absolute;
+   border-radius: 50%;
+}
+
+.circle1 {
+   top: 5%;
+   right: 5%;
+   animation-name: square;
+   animation-duration: 5s;
+   animation-timing-function: linear;
+   animation-delay: 0.5s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-fill-mode: backwards;
+   animation-play-state: running;
+}
+
+@keyframes square {
+   0% {
+      right: 5%;
+      top: 5%;
+   }
+
+   25% {
+      right: 5%;
+      top: 75%;
+   }
+
+   50% {
+      top: 75%;
+      right: 85%;
+   }
+
+   75% {
+      right: 85%;
+      top: 5%;
+   }
+}
+
+
+.circle2 {
+   bottom: 5%;
+   left: 5%;
+   animation-name: circle;
+   animation-duration: 5s;
+   animation-timing-function: linear;
+   animation-delay: 0.5s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-fill-mode: backwards;
+   animation-play-state: running;
+}
+
+@keyframes circle {
+   0% {
+      left: 5%;
+      bottom: 5%;
+   }
+
+   25% {
+      left: 5%;
+      bottom: 75%;
+   }
+
+   50% {
+      bottom: 75%;
+      left: 85%;
+   }
+
+   75% {
+      left: 85%;
+      bottom: 5%;
+   }
+}
+
+.dashboard {
+   flex: 1 0 10%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   text-align: center;
+   background: linear-gradient(to right bottom,
+         rgba(255, 255, 255, 0.7),
+         rgba(255, 255, 255, 0.3));
+   border-radius: 2rem;
+}
+
+.footer-wrapper {
+   display: flex;
+   flex: content;
+}
+
+
+.footer-wrap {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   flex-direction: row;
+   height: 100%;
+   width: 100%;
+   border-radius: 2rem;
+   font-weight: 500;
+   opacity: 0.8;
+   margin: 0rem 2rem 0rem 2rem;
+   padding: 1rem 0rem 1rem 0rem;
+}
+
+.tabs__item {
+   display: flex;
+   margin: 2rem 0rem;
+   padding: 1rem 5rem;
+   align-items: center;
+   text-decoration: none;
+}
+
+.tabs__item h2 {
+   padding: 0rem 2rem;
+}
+
+.moreinfo {
+   flex: 1 1 43%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+.user {
+   margin-top: 2rem;
+
+}
+
+/* About*/
+
+.status {
+   display: flex;
+   margin-bottom: 10rem;
+   margin: 2rem 0rem 0rem;
+   padding: 2rem 2rem;
+   font-size: 25px;
+   flex-direction: column;
+
+}
+
+.info {
+   margin: 2rem 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   background: linear-gradient(to left top,
+         rgba(255, 255, 255, 0.8),
+         rgba(255, 255, 255, 0.5));
+   border-radius: 1rem;
+   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+   padding: 1.5rem;
+   display: none;
+   line-height: 0.5rem;
+}
+
+.info:target {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   text-decoration: none;
+   line-height: 1.7rem;
+}
+
+.project {
+   line-height: 2rem;
+   color: #426696;
+   font-weight: 500;
+   opacity: 0.9;
+   position: relative;
+   top: 1rem;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 2rem;
+   padding: 1rem;
+}
+
+.poduct {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 6rem;
+   height: 6rem;
+   border-radius: 3rem;
+   box-shadow: 16px 6px 8px rgba(0, 0, 0, 0.212);
+
+}
+
+
+/* Code */
+#code {
+   color: black;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+
+}
+
+.red {
+   color: red;
+}
+
+.blue {
+   color: blueviolet;
+}
+
+#linkedin {
+   text-decoration: none;
+   color: #1f1d1dc4;
+}
+
+@media (min-width: 368px) and (max-width: 660px) {
+
+   .glass {
+      width: 85%;
+   }
+
+
+   .tabs__item {
+      display: flex;
+      margin: 0.2rem 0rem;
+      padding: 1rem 3rem;
+      align-items: center;
+      text-decoration: none;
+   }
+
+   .status {
+      display: flex;
+      margin-bottom: 10rem;
+      margin: 2rem;
+      padding: 2rem 2rem 2rem 0;
+      font-size: 25px;
+      flex-direction: column;
+   }
+
+   .project {
+      padding: 1rem;
+   }
+
+   .info {
+      flex-direction: column;
+      margin: 0;
+   }
+
+   pre {
+      display: flex;
+      flex-direction: column;
+      line-height: 1rem;
+   }
+
+   .circle1 {
+      display: none;
+   }
+
+   .circle2 {
+      display: none;
+   }
+
+
+}
+
+
+@media (min-width: 668px) and (max-width: 991px) {
+   .glass {
+      width: 90%;
+   }
+
+   .tabs__item {
+      display: flex;
+      margin: 0.2rem 0rem;
+      padding: 1rem 3rem;
+      align-items: center;
+      text-decoration: none;
+   }
+
+   .circle1 {
+      display: none;
+   }
+
+   .circle2 {
+      display: none;
+   }
+}
+
+
+@media (min-width: 991px) and (max-width: 1199px) {
+
+   .glass {
+      width: 90%;
+   }
+
+   .tabs__item {
+      display: flex;
+      margin: 0.2rem 0rem;
+      padding: 1rem 3rem;
+      align-items: center;
+      text-decoration: none;
+   }
+
+   .circle1 {
+      display: none;
+   }
+
+   .circle2 {
+      display: none;
+   }
+
+}
+
+@media (min-width: 1200px) {
+
+   .glass {
+      width: 80%;
+   }
+
+   .tabs__item {
+      display: flex;
+      margin: 0.2rem 0rem;
+      padding: 1rem 3rem;
+      align-items: center;
+      text-decoration: none;
+   }
+
+   .tabs__item h2 {
+      padding: 0rem 2rem;
+   }
+
+   .circle1 {
+      height: 12rem;
+      width: 12rem;
+   }
+
+   .circle2 {
+      height: 12rem;
+      width: 12rem;
+   }
+}
